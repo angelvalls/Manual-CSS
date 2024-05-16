@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Àngel Valls --- Z-index</title>
+  </head>
+
+  <body>
+    <h1 class="cabecera">MANUAL CSS</h1>
+
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="display.html">Display</a></li>
+        <li><a href="position.html">Position</a></li>
+        <li><a href="z-index.html">Z-index</a></li>
+        <li><a href="overflow.html">Overflow</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Float and clear</a>
+            <div class="dropdown-content">
+                <a href="float.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="examples.html">Float examples</a>
+            </div>
+        </li>
+        <li><a href="inline.html">Display: inline-block</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="p-classes.html">Pseudo-classes</a>
+                <a href="p-elements.html">Pseudo-elements</a>
+            </div>
+        </li>
+    </ul>
+
+    <h2>Propiedad z-index</h2>
+    <hr>
+
+    <p>La propiedad z-index especifica el orden de apilamiento de un elemento (qué elemento debe colocarse delante o detrás de los demás).<br><br>
+        Cuando los elementos se posicionan, pueden superponerse a otros elementos.
+        <br><br>
+       
+      </p>
+
+    <p>Un elemento puede tener un orden de pila positivo o negativo. Ejemplo:
+    <pre>
+
+    img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    }
+
+</pre>
+
+    <h3>Otro ejemplo de z-index </h3>
+
+    <p>Aquí vemos que un elemento con mayor orden de pila siempre está encima de un elemento con menor orden de pila.</p>
+    <pre>
+
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;style&gt;
+                .container {
+                    position: relative;
+                }
+
+                .black-box {
+                    position: relative;
+                    z-index: 1;
+                    border: 2px solid black;
+                    height: 100px;
+                    margin: 30px;
+                }
+
+                .gray-box {
+                    position: absolute;
+                    z-index: 3;
+                    background: lightgray;
+                    height: 60px;
+                    width: 70%;
+                    left: 50px;
+                    top: 50px;
+                }
+
+                .green-box {
+                    position: absolute;
+                    z-index: 2;
+                    background: lightgreen;
+                    width: 35%;
+                    left: 270px;
+                    top: -15px;
+                    height: 100px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+            &lt;div class="container"&gt;
+            &lt;div class="black-box">Black box&lt;/div&gt;
+            &lt;div class="gray-box">Gray box&lt;/div&gt;
+            &lt;div class="green-box">Green box&lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/body&gt;
+    &lt;/html&gt;
+    
+</pre>
+
+    <h3>Sin z-index</h3>
+
+    <p>Si dos elementos posicionados se superponen sin especificar un índice z, el último elemento definido en el código
+        HTML se mostrará en la parte superior.</p>
+
+    <div class="pie-pagina">
+        <hr>
+
+        <p>Àngel Valls Segura LLenguatge de Marques</p>
+
+        <br>
+    </div>
+
+  </body>
+</html>

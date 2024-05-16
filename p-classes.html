@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Àngel Valls --- Pseudo Classes</title>
+</head>
+<body>
+    <h1 class="cabecera">MANUAL CSS</h1>
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="display.html">Display</a></li>
+        <li><a href="position.html">Position</a></li>
+        <li><a href="z-index.html">Z-index</a></li>
+        <li><a href="overflow.html">Overflow</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Float and clear</a>
+            <div class="dropdown-content">
+                <a href="float.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="examples.html">Float examples</a>
+            </div>
+        </li>
+        <li><a href="inline.html">Display: inline-block</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="p-classes.html">Pseudo-classes</a>
+                <a href="p-elements.html">Pseudo-elements</a>
+            </div>
+        </li>
+    </ul>
+
+    <h2>Pseudo-classes</h2>
+    <hr>
+
+    <p>Se utiliza una pseudoclase para definir un estado especial de un elemento.</p>
+
+    <p> Ejemplo, donde se puede utilizar:<br>
+
+        <ul style="margin-left: 20px; background-color: transparent;">
+            <li>-Aplicar estilo a un elemento cuando un usuario pasa el mouse sobre él</li><br>
+            <li>-Diseñe los enlaces visitados y no visitados de manera diferente</li><br>
+            <li>-Aplicar estilo a un elemento cuando recibe el foco</li><br>
+        </ul>
+        
+    </p>
+
+
+    <h3>Pseudoclases de anclaje</h3>
+
+    <pre>
+        /* unvisited link */
+        a:link {
+          color: #FF0000;
+        }
+        
+        /* visited link */
+        a:visited {
+          color: #00FF00;
+        }
+        
+        /* mouse over link */
+        a:hover {
+          color: #FF00FF;
+        }
+        
+        /* selected link */
+        a:active {
+          color: #0000FF;
+        }
+    </pre>
+
+    
+    <h3>Pseudo-classes and HTML Classes</h3>
+
+    <p>Las pseudoclases se pueden combinar con clases HTML: </p>
+    <p>Cuando pasas el cursor sobre el enlace en el ejemplo, cambiará de color:</p>
+
+    <pre>
+        a.highlight:hover {
+            color: #ff0000;
+        }
+    </pre>
+
+    
+    <h3>Hover on div</h3>
+
+    <p>Un ejemplo del uso de la pseudoclase :hover en un elemento div:</p>
+
+    <pre>
+        div:hover {
+            background-color: blue;
+        }
+    </pre>
+
+    <h3>Desplazamiento simple de información sobre herramientas</h3>
+
+    <p>Pase el cursor sobre un elemento div para mostrar un elemento p (como una información sobre herramientas):</p>
+
+    <pre>
+        p {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+        }
+          
+        div:hover p {
+            display: block;
+        }
+    </pre>
+
+
+    <h3>CSS - La: pseudo-clase del primer hijo</h3>
+    <p>La pseudoclase :first-child coincide con un elemento específico que es el primer hijo de otro elemento.</p>
+
+    <h3>Coincidir con el primer elemento p</h3>
+
+    <pre>
+        p:first-child {
+            color: blue;
+        }
+    </pre>
+
+    <h3>Coincidir el primer elemento i en todos los elementos p</h3>
+
+    <pre>
+        p i:first-child {
+            color: blue;
+        }          
+    </pre>
+
+    <h3>Coincidir todos los elementos i en todos los primeros elementos secundarios p</h3>
+
+    <pre>
+        p:first-child i {
+            color: blue;
+        }
+    </pre>
+
+    <h3>CSS: la pseudoclase :lang</h3>
+    <p>La pseudoclase :lang le permite definir reglas especiales para diferentes idiomas.</p>
+
+    <p>En el siguiente ejemplo, :lang define las comillas para los elementos q con lang="no":</p>
+
+    <pre>
+        q:lang(no) {
+            quotes: "~" "~";
+        }
+    </pre>
+
+    <div class="pie-pagina">
+        <hr>
+
+        <p>Àngel Valls Segura LLenguatge de Marques</p>
+
+        <br>
+    </div>
+
+</body>
+</html>

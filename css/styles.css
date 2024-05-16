@@ -1,0 +1,120 @@
+*{
+	font-family:"Arial";
+}
+
+.cabecera, .pie-pagina{
+	color: #b34d09;
+	text-align: center;
+}
+
+h2, h3 {
+	color: #b34d09;
+	}
+
+pre {
+  margin: 35px;
+  font-size:16px;
+  display: block;
+  font-family: monospace;
+  background-color:#ddd3d3;
+  }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #b34d09;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #afadad;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.container-visible {
+    width: 200px;
+    height: 110px;
+    overflow: visible;
+    border: 1px solid black;
+}
+  
+.container-hidden {
+    width: 200px;
+    height: 110px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+.container-scroll {
+    width: 200px;
+    height: 110px;
+    overflow: scroll;
+    border: 1px solid black;
+}
+.container-auto {
+    width: 200px;
+    height: 110px;
+    overflow: auto;
+    border: 1px solid black;
+}
+div.scrollx{
+    padding: 4px;
+    background-color: #b34d09;
+    width: 200px;
+    height: 125px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid;
+}
+
+
+.child {
+    width: 200px;
+    height: 110px;
+    background-color: #b34d09;
+}
+.child p {
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+
+a {padding:30px;}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Àngel Valls --- Pseudo-Elements</title>
+</head>
+<body>
+    <h1 class="cabecera">MANUAL CSS</h1>
+
+
+
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="display.html">Display</a></li>
+        <li><a href="position.html">Position</a></li>
+        <li><a href="z-index.html">Z-index</a></li>
+        <li><a href="overflow.html">Overflow</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Float and clear</a>
+            <div class="dropdown-content">
+                <a href="float.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="examples.html">Float examples</a>
+            </div>
+        </li>
+        <li><a href="inline.html">Display: inline-block</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="p-classes.html">Pseudo-classes</a>
+                <a href="p-elements.html">Pseudo-elements</a>
+            </div>
+        </li>
+    </ul>
+
+    <h2>Pseudo-elements</h2>
+    <hr>
+
+    <p>Un pseudoelemento CSS se utiliza para diseñar partes específicas de un elemento.</p>
+
+    <p>Por ejemplo, se puede utilizar para:<br>
+        <ul style="margin-left: 20px; background-color: transparent;">
+            <li>-Aplicar estilo a la primera letra o línea de un elemento</li><br>
+            <li>-Insertar contenido antes o después del contenido de un elemento</li><br>           
+        </ul>
+       
+    </p>
+    
+    <h3>El pseudoelemento ::first-line</h3>
+    <p>El pseudoelemento ::first-line se utiliza para agregar un estilo especial a la primera línea de un texto.</p>
+
+    <pre>
+        p::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+    </pre>
+
+    <p><strong>Nota:</strong> El pseudoelemento ::first-line sólo puede aplicarse a elementos de nivel de bloque.</p>
+    <p>Las siguientes propiedades se aplican al pseudoelemento ::first-line:</p>
+
+    <ul style="margin-left: 20px; background-color: transparent;">
+        <li>font properties</li><br>
+        <li>color properties</li><br>
+        <li>background properties</li><br>
+        <li>word-spacing</li><br>
+        <li>letter-spacing</li><br>
+        <li>text-decoration</li><br>
+        <li>vertical-align</li><br>
+        <li>text-transform</li><br>
+        <li>line-height</li><br>
+        <li>clear</li><br>
+    </ul>
+    <br>
+
+    <h3>El pseudoelemento ::first-letter</h3>
+
+    <p>El pseudoelemento ::first-letter se utiliza para agregar un estilo especial a la primera letra de un texto.</p>
+
+    <pre>
+        p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+    </pre>
+
+    <p><strong>Nota:</strong> El pseudoelemento ::first-letter sólo puede aplicarse a elementos de nivel de bloque.</p>
+    <p>Las siguientes propiedades se aplican al pseudoelemento ::first-letter: </p>
+
+    <ul style="margin-left: 20px; background-color: transparent;list-style-type: circle;">
+        <li>font properties</li><br>
+        <li>color properties</li><br>
+        <li>background properties</li><br>
+        <li>margin properties</li><br>
+        <li>padding properties</li><br>
+        <li>border properties</li><br>
+        <li>text-decoration</li><br>
+        <li>vertical-align (only if "float" is "none")</li><br>
+        <li>text-transform</li><br>
+        <li>line-height</li><br>
+        <li>float</li><br>
+        <li>clear</li><br>
+    </ul>
+
+
+
+
+    <h3>Pseudoelementos y clases HTML</h3>
+    <p>Los pseudoelementos se pueden combinar con clases HTML:</p>
+
+    <pre>
+        p.intro::first-letter {
+            color: #ff0000;
+            font-size: 200%;
+        }
+    </pre>
+
+    <h3>Múltiples pseudoelementos</h3>
+    <p>También se pueden combinar varios pseudoelementos.</p>
+    <p>En el siguiente ejemplo, la primera letra de un párrafo será roja y tendrá un tamaño de fuente xx-grande. El resto de la primera línea será azul y en minúsculas. El resto del párrafo tendrá el tamaño y color de fuente predeterminados:</p>
+
+    <pre>
+        p::first-letter {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+          
+        p::first-line {
+            color: #0000ff;
+            font-variant: small-caps;
+        }
+    </pre>
+
+
+    <h3>CSS: el pseudoelemento ::before</h3>
+    <p>El pseudoelemento ::before se puede utilizar para insertar algún contenido antes del contenido de un elemento.</p>
+
+    <pre>
+        h1::before {
+            content: url(smiley.gif);
+        }
+    </pre>
+
+    <h3>CSS: el pseudoelemento ::after</h3>
+    <p>El pseudoelemento ::after se puede utilizar para insertar algún contenido después del contenido de un elemento.</p>
+
+    <pre>
+        h1::after {
+            content: url(smiley.gif);
+        }
+    </pre>
+
+    <h3>CSS: el pseudoelemento ::marker</h3>
+    <p>El pseudoelemento ::marker selecciona los marcadores de los elementos de la lista.</p>
+    <pre>
+        ::marker {
+            color: red;
+            font-size: 23px;
+        }
+    </pre>
+
+    <h3>CSS: el pseudoelemento ::selection</h3>
+    <p>El pseudoelemento ::selection coincide con la parte de un elemento seleccionada por un usuario.</p>
+
+    <p>Las siguientes propiedades CSS se pueden aplicar a ::selection: color, fondo, cursor y contorno.</p>
+        
+    <p>El siguiente ejemplo hace que el texto seleccionado sea rojo sobre un fondo amarillo:</p>
+
+    <pre>
+        ::selection {
+            color: red;
+            background: yellow;
+        }
+    </pre>
+
+
+
+    <div class="pie-pagina">
+        <hr>
+
+        <p>Àngel Valls Segura LLenguatge de Marques</p>
+
+        <br>
+    </div>
+
+</body>
+</html>

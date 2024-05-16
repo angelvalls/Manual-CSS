@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Àngel Valls --- Combinators</title>
+    </head>
+
+    <body>
+    <h1 class="cabecera">MANUAL CSS</h1>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="display.html">Display</a></li>
+        <li><a href="position.html">Position</a></li>
+        <li><a href="z-index.html">Z-index</a></li>
+        <li><a href="overflow.html">Overflow</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Float and clear</a>
+            <div class="dropdown-content">
+                <a href="float.html">Float</a>
+                <a href="clear.html">Clear</a>
+                <a href="examples.html">Float examples</a>
+            </div>
+        </li>
+        <li><a href="inline.html">Display: inline-block</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Others</a>
+            <div class="dropdown-content">
+                <a href="combinators.html">Combinators</a>
+                <a href="p-classes.html">Pseudo-classes</a>
+                <a href="p-elements.html">Pseudo-elements</a>
+            </div>
+        </li>
+    </ul>
+
+    
+    <h2>Combinadores CSS</h2>
+    <hr>
+    <p>Un selector CSS puede contener más de un selector simple. Entre los selectores simples podemos incluir un combinador.</p>
+    <p>Hay cuatro combinadores diferentes en CSS:<br><br>
+        <ul style="margin-left: 20px; background-color: transparent;">
+            <li></listyle>selector descendiente (espacio)</li><br>
+            <li>selector de niños (>)</li><br>
+            <li>selector de hermanos adyacentes (+)</li><br>
+            <li>selector de hermanos general (~)</li>
+        </ul>
+    </p>
+    <br>
+
+
+    <h3>Selector descendente</h3>
+
+    <p>El selector de descendientes coincide con todos los elementos que son descendientes de un elemento específico.
+
+        El siguiente ejemplo selecciona todos los elementos p dentro de los elementos div:
+    </p>
+    
+    <pre>
+        div p {
+            background-color: yellow;
+        }
+    </pre>
+
+
+    <h3>Child Selector (>)</h3>
+
+    <p>El selector de hijos selecciona todos los elementos que son hijos de un elemento específico.</p>
+
+    <pre>
+        div > p {
+            background-color: yellow;
+        }
+    </pre>
+
+
+    <h3>Selector de hermanos adyacentes (+)</h3>
+
+    <p>El selector de hermanos adyacentes se utiliza para seleccionar un elemento que está directamente después de otro elemento específico.<br>
+
+        Los elementos hermanos deben tener el mismo elemento padre y "adyacente" significa "inmediatamente siguiente".
+    </p>
+
+    <pre>
+        div + p {
+            background-color: yellow;
+        }
+    </pre>
+
+
+    <h3>Selector general de hermanos (~)</h3>
+
+    <p>El selector de hermanos general selecciona todos los elementos que son los siguientes hermanos de un elemento específico.
+    </p>
+
+    <pre>
+        div ~ p {
+            background-color: yellow;
+        }
+    </pre>
+
+    <div class="pie-pagina">
+        <hr>
+
+        <p>Àngel Valls Segura LLenguatge de Marques</p>
+
+        <br>
+    </div>
+    
+    </body>
+</html>
